@@ -27,6 +27,32 @@
                 "TradeDragons": [
                     "Arsene"
                 ]
+            },
+            {
+                "Id": 1020118,
+                "Start": "2024-06-24T15:22:06Z",
+                "End": "2025-06-24T15:22:06Z",
+                "IsGala": false,
+                "IsPrizeShowcase": false,
+                "PickupCharas": [
+                    "Linnea",
+                    "Curran"
+                ],
+                "PickupDragons": [
+                    "MiniMercs"
+                ],
+                "LimitedCharas": [
+                    "Curran"
+                ],
+                "LimitedDragons": [
+                    "GalaThor"
+                ],
+                "TradeCharas": [
+                    "Curran"
+                ],
+                "TradeDragons": [
+                    "Arsene"
+                ]
             }
         ]
     }
