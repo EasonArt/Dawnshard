@@ -73,6 +73,6 @@ jobs:
           context: .
           push: true
           file: ${{ inputs.dockerfile }}
-          tags: ghcr.io/sapiensanatis/${{ inputs.image-name }}:${{ steps.derive-tag.outputs.tag }}
+          tags: ghcr.io/easonart/${{ inputs.image-name }}:${{ steps.derive-tag.outputs.tag }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
