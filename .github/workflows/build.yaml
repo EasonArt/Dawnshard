@@ -74,7 +74,7 @@ jobs:
           context: .
           push: true
           file: ${{ inputs.dockerfile }}
-          tags: ghcr.io/sapiensanatis/${{ inputs.image-name }}:${{ steps.nbgv.outputs.SemVer2 }}
+          tags: ghcr.io/easonart/${{ inputs.image-name }}:${{ steps.nbgv.outputs.SemVer2 }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
           labels: |
