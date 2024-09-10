@@ -2,6 +2,7 @@ import { enhancedImages } from '@sveltejs/enhanced-img';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
+import fs from 'fs';
 
 export default defineConfig(({ mode }) => ({
   plugins: [
@@ -14,6 +15,10 @@ export default defineConfig(({ mode }) => ({
     })
   ],
   server: {
+    https: {
+      cert: fs.readFileSync('/crt/jokerxyc.top.crt'),
+      key: fs.readFileSync('/crt/jokerxyc.top.key'),
+    },
     port: 3001,
     host: true,
     proxy: {
