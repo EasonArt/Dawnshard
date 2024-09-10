@@ -5,40 +5,40 @@ import checker from 'vite-plugin-checker';
 import fs from 'fs';
 
 export default defineConfig(({ mode }) => ({
-  plugins: [
-    sveltekit(),
-    enhancedImages(),
-    checker({
-      overlay: true, // Doesn't work
-      typescript: true,
-      eslint: { lintCommand: 'eslint ./src/**/*.{ts,svelte}', useFlatConfig: true }
-    })
-  ],
-  server: {
-    https: {
-      cert: fs.readFileSync('/crt/jokerxyc.top.crt'),
-      key: fs.readFileSync('/crt/jokerxyc.top.key'),
+    plugins: [
+        sveltekit(),
+        enhancedImages(),
+        checker({
+            overlay: true, // Doesn't work
+            typescript: true,
+            eslint: { lintCommand: 'eslint ./src/**/*.{ts,svelte}', useFlatConfig: true }
+        })
+    ],
+    server: {
+        https: {
+            cert: fs.readFileSync('./crt/jokerxyc.top.crt'),
+            key: fs.readFileSync('./crt/jokerxyc.top.key'),
+        },
+        port: 3001,
+        host: true,
+        proxy: {
+            '/api': {
+                target: 'http://localhost:5000',
+                changeOrigin: true
+            }
+        }
     },
-    port: 3001,
-    host: true,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5000',
-        changeOrigin: true
-      }
+    build: {
+        // Hack to get top-level await support required by Mock Service Worker for Playwright
+        target: mode === 'development' ? 'es2022' : 'modules'
+    },
+    preview: {
+        port: 3001,
+        proxy: {
+            '/api': {
+                target: 'http://localhost:5000',
+                changeOrigin: true
+            }
+        }
     }
-  },
-  build: {
-    // Hack to get top-level await support required by Mock Service Worker for Playwright
-    target: mode === 'development' ? 'es2022' : 'modules'
-  },
-  preview: {
-    port: 3001,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5000',
-        changeOrigin: true
-      }
-    }
-  }
 }));
