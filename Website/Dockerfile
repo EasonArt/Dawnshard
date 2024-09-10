@@ -1,6 +1,6 @@
 FROM node:22.7.0-bookworm-slim AS base
 
-EXPOSE 3001
+EXPOSE 3000
 
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH=$PATH:/home/node/.npm-global/bin
