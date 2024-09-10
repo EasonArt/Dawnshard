@@ -1,6 +1,6 @@
 # Website
 
-The websites is a new frontend for Dawnshard that serves as the public-facing home for the project. It also allows players to view the news, time attack rankings, or administer their account by offering e.g. save export.
+The website is a new frontend for Dawnshard that serves as the public-facing home for the project. It also allows players to view the news, time attack rankings, or administer their account by offering e.g. save export.
 
 It uses SvelteKit 4 and is deployed as a server-side-rendered web app with [`adapter-node`](https://kit.svelte.dev/docs/adapter-node).
 
