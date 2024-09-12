@@ -15,15 +15,11 @@ export default defineConfig(({ mode }) => ({
         })
     ],
     server: {
-        https: {
-            cert: fs.readFileSync('./crt/jokerxyc.top.crt'),
-            key: fs.readFileSync('./crt/jokerxyc.top.key'),
-        },
         port: 3001,
         host: true,
         proxy: {
             '/api': {
-                target: 'http://localhost:5000',
+                target: 'http://jokerxyc.top:3000',
                 changeOrigin: true
             }
         }
@@ -36,7 +32,7 @@ export default defineConfig(({ mode }) => ({
         port: 3001,
         proxy: {
             '/api': {
-                target: 'http://localhost:5000',
+                target: 'http://jokerxyc.top:3000',
                 changeOrigin: true
             }
         }
