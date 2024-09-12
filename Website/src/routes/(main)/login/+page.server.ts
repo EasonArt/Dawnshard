@@ -19,6 +19,7 @@ const getUrlSafeBase64Hash = async (input: string) => {
 };
 
 export const load: PageServerLoad = async ({ cookies, url }) => {
+  console.info(url);
   const redirectUri = new URL('oauth', url.origin);
 
   const originalPage = url.searchParams.get('originalPage') ?? '/';
@@ -26,9 +27,15 @@ export const load: PageServerLoad = async ({ cookies, url }) => {
   const challengeStringValue = getChallengeString();
   cookies.set('challengeString', challengeStringValue, { path: '/' });
 
+  console.info(redirectUri.toString());
+  let rediUrl = redirectUri.toString();
+  if(rediUrl.includes("localhost")){
+    rediUrl = "https://www.jokerxyc.top:3000/oauth";
+  }
+  console.info(rediUrl);
   const queryParams = new URLSearchParams({
     client_id: PUBLIC_BAAS_CLIENT_ID,
-    redirect_uri: redirectUri.toString(),
+    redirect_uri: rediUrl,
     response_type: 'session_token_code',
     scope: 'user user.birthday openid',
     language: 'en-US',
