@@ -38,11 +38,11 @@
   const columns = table.createColumns([
     table.column({
       accessor: ({ rank }) => rank,
-      header: 'Rank'
+      header: '排名'
     }),
     table.column({
       accessor: ({ players }) => players,
-      header: coop ? 'Players' : 'Player',
+      header: coop ? '玩家们' : '玩家',
       cell: ({ value: players }) => {
         return players.map((p) => p.name).join(', ');
       }
@@ -53,13 +53,13 @@
         const date = new Date(time * 1000);
         return date.toISOString().slice(14, -3);
       },
-      header: 'Clear Time'
+      header: '通关时间'
     }),
     table.column({
       accessor: ({ players }) => {
         return getTeam(coop, players);
       },
-      header: 'Team',
+      header: '队伍',
       cell: ({ row, value }, { pluginStates }) => {
         const { isExpanded } = pluginStates.expand.getRowState(row);
         return createRender(TeamCell, { team: value, isExpanded });
@@ -176,11 +176,11 @@
       variant="outline"
       size="sm"
       on:click={() => changePage($pageIndex - 1)}
-      disabled={!initialized || !$hasPreviousPage}>Previous</Button>
+      disabled={!initialized || !$hasPreviousPage}>上一页</Button>
     <Button
       variant="outline"
       size="sm"
       on:click={() => changePage($pageIndex + 1)}
-      disabled={!initialized || !$hasNextPage}>Next</Button>
+      disabled={!initialized || !$hasNextPage}>下一页</Button>
   </div>
 </div>

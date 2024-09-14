@@ -12,7 +12,7 @@
 
 <li class="present">
   <Gift aria-hidden={true} />
-  <p>Add {present.quantity}x <strong>{presentLabel}</strong> to the gift box</p>
+  <p>添加 {present.quantity}x <strong>{presentLabel}</strong> 至您的游戏邮箱</p>
 </li>
 
 <style>

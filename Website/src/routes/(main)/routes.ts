@@ -20,30 +20,30 @@ export type Route = {
 
 export const routeGroups: RouteGroup[] = [
   {
-    title: 'Information',
+    title: '咨询',
     routes: [
-      { title: 'Home', href: '/', icon: House },
-      { title: 'News', href: '/news/1', icon: Newspaper }
+      { title: '主页', href: '/', icon: House },
+      { title: '新闻', href: '/news/1', icon: Newspaper }
     ]
   },
 
   {
-    title: 'Events',
+    title: '事件',
     routes: [
       {
-        title: 'Time Attack Rankings',
+        title: '速通排行',
         href: '/events/time-attack/rankings/227010104',
         icon: ChartBarIncreasing
       }
     ]
   },
   {
-    title: 'Account',
+    title: '账户',
     requireAuth: true,
     routes: [
-      { title: 'Profile', href: '/account/profile', icon: User },
+      { title: '简介', href: '/account/profile', icon: User },
       {
-        title: 'Save Editor',
+        title: 'GM工具',
         href: '/account/save-editor',
         icon: Pencil
       }

@@ -41,22 +41,22 @@
     <Card.Title>
       <div class="flex flex-row items-center justify-items-start gap-2">
         <Info aria-hidden={true} size={25} />
-        <h2 class="m-0 text-xl font-bold">User information</h2>
+        <h2 class="m-0 text-xl font-bold">玩家信息</h2>
       </div>
     </Card.Title>
   </Card.Header>
   <Card.Content>
     <div class="flex flex-col gap-4">
       <div>
-        <p class="font-semibold">Viewer ID</p>
+        <p class="font-semibold">玩家id</p>
         <p>{formatViewerId(user.viewerId)}</p>
       </div>
       <div>
-        <p class="font-semibold">Player name</p>
+        <p class="font-semibold">玩家名字</p>
         <p>{user.name}</p>
       </div>
       <div>
-        <p class="font-semibold">Last login time</p>
+        <p class="font-semibold">最后登录时间</p>
         <p>{renderDate(userProfile.lastLoginTime)}</p>
       </div>
     </div>

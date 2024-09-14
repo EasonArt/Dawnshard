@@ -47,13 +47,7 @@
 
 <div class="px-6 pt-4">
   <div class="flex flex-col items-center gap-4">
-    <h1 class="text-nowrap text-2xl font-bold tracking-tight">Welcome to Dawnshard</h1>
-    <div class="flex flex-wrap gap-2">
-      <IconButton href="https://github.com/sapiensanatis/dawnshard" icon={GitHub} />
-      <IconButton href="https://discord.gg/j9zSttjjWj" icon={Discord} />
-      <IconButton href="https://patreon.com/dawnshard" icon={Patreon} />
-      <IconButton href="https://buymeacoffee.com/dawnshard" icon={BuyMeACoffee} />
-    </div>
+    <h1 class="text-nowrap text-2xl font-bold tracking-tight">欢迎来到失落的龙约</h1>
   </div>
   <hr class="mb-1 mt-4" />
   <div class="flex flex-col gap-3 p-3">

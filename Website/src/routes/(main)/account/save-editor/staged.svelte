@@ -42,10 +42,10 @@
     loading = false;
 
     if (response.ok) {
-      toast.success('Successfully edited save');
+      toast.success('发送物品成功');
       onClickReset();
     } else {
-      toast.error('Failed to edit save');
+      toast.error('发送失败，可能您没有权限，限定版可用，如需升级请联系客服！');
       // eslint-disable-next-line no-console
       console.error('Savefile edit request failed with status', response.status);
     }
@@ -57,7 +57,7 @@
     <Card.Title>
       <div class="flex flex-row items-center justify-items-start gap-2">
         <NotebookPen aria-hidden={true} size={25} />
-        <h2 id="staged-changes-title" class="m-0 text-xl font-bold">Staged changes</h2>
+        <h2 id="staged-changes-title" class="m-0 text-xl font-bold">发送清单</h2>
         {#if $changesCount > 90}
           <div class="flex-grow" />
           <p class="text-sm font-normal text-muted-foreground">{$changesCount} / 100</p>
@@ -67,9 +67,9 @@
   </Card.Header>
   <Card.Content class={anyModifications ? 'h-full' : 'pb-0'}>
     <div class="flex gap-3">
-      <Button disabled={!anyModifications} variant="outline" on:click={onClickReset}>Reset</Button>
+      <Button disabled={!anyModifications} variant="outline" on:click={onClickReset}>重置</Button>
       <Button disabled={!anyModifications || $changesCount > 100} {loading} on:click={onClickSave}>
-        Save changes
+        发送物品
       </Button>
     </div>
     <br />

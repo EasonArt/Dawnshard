@@ -18,7 +18,7 @@
   });
 </script>
 
-<h1 class="scroll-m-20 text-2xl font-bold tracking-tight md:text-3xl">Dawnshard</h1>
+<h1 class="scroll-m-20 text-2xl font-bold tracking-tight md:text-3xl">失落的龙约</h1>
 <div class="flex-grow" />
 <Button on:click={toggleMode} variant="outline" size="icon" data-loaded={jsLoaded}>
   <Sun
@@ -31,7 +31,7 @@
 </Button>
 
 {#if hasValidJwt}
-  <Button href="/logout" variant="secondary" data-sveltekit-reload>Log out</Button>
+  <Button href="/logout" variant="secondary" data-sveltekit-reload>退出</Button>
 {:else}
-  <Button href={`/login?originalPage=${$page.url.pathname}`}>Login</Button>
+  <Button href={`/login?originalPage=${$page.url.pathname}`}>登录</Button>
 {/if}

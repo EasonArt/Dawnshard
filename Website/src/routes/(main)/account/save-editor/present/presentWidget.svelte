@@ -89,19 +89,19 @@
     <Card.Title>
       <div class="flex flex-row items-center justify-items-start gap-2">
         <Gift aria-hidden={true} size={25} />
-        <h2 id="gift-box-title" class="m-0 text-xl font-bold">Gift box</h2>
+        <h2 id="gift-box-title" class="m-0 text-xl font-bold">礼品盒</h2>
       </div>
     </Card.Title>
   </Card.Header>
   <Card.Content>
-    <p class="mb-5">Use this widget to add presents to your gift box.</p>
+    <p class="mb-5">使用此功能将各种道具加到您的游戏邮箱中。</p>
     <form use:form on:submit|preventDefault={onSubmit} aria-labelledby="gift-box-title">
       <div class="flex flex-row flex-wrap gap-4">
         <div class="labelled-input">
-          <Label for="type">Type</Label>
+          <Label for="type">类别</Label>
           <Select
             id="type"
-            placeholder="Select an item type"
+            placeholder="选择一种类别"
             items={types}
             field={type}
             on:change={onTypeChange}
@@ -116,10 +116,10 @@
           {/if}
         </div>
         <div class="labelled-input">
-          <Label for="item">Item</Label>
+          <Label for="item">种类</Label>
           <Select
             id="item"
-            placeholder="Select an item"
+            placeholder="选择哪种道具"
             items={availableItems}
             field={item}
             required
@@ -133,10 +133,10 @@
           {/if}
         </div>
         <div class="labelled-input">
-          <Label for="quantity">Quantity</Label>
+          <Label for="quantity">数量</Label>
           <Input
             id="quantity"
-            placeholder="Enter a quantity"
+            placeholder="请输入数量"
             type="number"
             disabled={disableQuantity}
             field={quantity}
@@ -155,7 +155,7 @@
       </div>
       <br />
       <Button type="submit" disabled={!$form.valid || !$form.touched || $changesCount >= 100}>
-        Add
+        添加
       </Button>
     </form>
   </Card.Content>

@@ -29,7 +29,7 @@
   });
 </script>
 
-<Page title="News">
+<Page title="新闻">
   <div class="mb-4 flex flex-col gap-3 px-3">
     {#if loading}
       {#each { length: pageSize } as _}

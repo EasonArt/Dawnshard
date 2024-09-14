@@ -12,20 +12,15 @@
   export let data: PageData;
 </script>
 
-<Page title="Save Editor">
+<Page title="GM工具">
   <div id="about" class="max-w-7xl">
-    <Typography typography="h2">About</Typography>
+    <Typography typography="h2">关于</Typography>
     <p>
-      On this page, you can make modifications to your account without having to go through the save
-      export and import process.
+      在此页面上，您可以发送各种道具到您的游戏邮箱
+
     </p>
     <p>
-      The functionality is basic for now, but may be expanded in the future. For more extensive
-      modifications, using the Java-based <a
-        class="link"
-        href="https://github.com/sockperson/DragaliaSaveEditor/releases/latest">
-        DragaliaSaveEditor
-      </a> by sockperson is recommended, but it requires access to a desktop computer.
+      该功能目前是基本的，将来可能会扩展。
     </p>
   </div>
   <br />

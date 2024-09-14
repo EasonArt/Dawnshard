@@ -12,10 +12,10 @@
   $: currentQuest = data.questList.find((q) => q.id === parseInt($page.params.questId));
 </script>
 
-<Page title="Time Attack Rankings">
+<Page title="速通排行">
   <div class="mb-4 flex w-full flex-wrap items-start justify-between gap-4">
     <div>
-      <p class="mb-2">Select a quest to view rankings:</p>
+      <p class="mb-2">选择一个任务以查看排名：</p>
       <ul class="pl-4">
         {#each data.questList as { id: questId }}
           <li>
@@ -34,7 +34,7 @@
       src="$lib/assets/timeAttack/volk.png"
       alt="Promotional banner for selected time attack quest" />
   </div>
-  <Typography typography="h2" id="time-attack-table-title">Clears</Typography>
+  <Typography typography="h2" id="time-attack-table-title">榜单</Typography>
   {#key currentQuest?.id}
     <DataTable
       data={data.clearData.data}

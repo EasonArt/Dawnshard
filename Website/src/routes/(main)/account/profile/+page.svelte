@@ -9,17 +9,12 @@
   export let data: PageData;
 </script>
 
-<Page title="Profile">
+<Page title="简介">
   <div class="w-full px-3 lg:w-[75%]">
     <div class="card">
       <UserInformation user={data.user} userProfile={data.userProfile} />
     </div>
-    <div class="card">
-      <SaveExport />
-    </div>
-    <div class="card">
-      <SaveImport lastSaveImportTime={data.userProfile.lastSaveImportTime} />
-    </div>
+
   </div>
 </Page>
 
