@@ -19,6 +19,8 @@ public class DbPlayer
 
     public int SavefileVersion { get; set; }
 
+    public int IsUse { get; set; }
+
     public DbPlayerUserData? UserData { get; set; }
 
     public List<DbAbilityCrest> AbilityCrestList { get; set; } = [];

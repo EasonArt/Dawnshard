@@ -1,14 +1,18 @@
 using DragaliaAPI.Database;
+using DragaliaAPI.Database.Entities;
 using DragaliaAPI.Features.Present;
+using DragaliaAPI.Services.Exceptions;
 using DragaliaAPI.Shared.Definitions.Enums;
 using DragaliaAPI.Shared.Features.Presents;
 using DragaliaAPI.Shared.MasterAsset;
+using DragaliaAPI.Shared.PlayerDetails;
 
 namespace DragaliaAPI.Features.Web.Savefile;
 
 internal sealed partial class SavefileEditService(
     IPresentService presentService,
     ApiContext apiContext,
+    IPlayerIdentityService playerIdentityService,
     ILogger<SavefileEditService> logger
 )
 {
@@ -16,6 +20,16 @@ internal sealed partial class SavefileEditService(
 
     public async Task PerformEdits(SavefileEditRequest request)
     {
+        long playerId = playerIdentityService.ViewerId;
+        DbPlayer player = await apiContext.Players.FindAsync(playerId);
+        if (player != null)
+        {
+            if (player.IsUse.CompareTo(4) != 0)
+            {
+                throw new DragaliaException(ResultCode.CommonDbError, "No DmodePlayRecord found");
+            }
+        }
+
         foreach (PresentFormSubmission presentFormSubmission in request.Presents)
         {
             presentService.AddPresent(
