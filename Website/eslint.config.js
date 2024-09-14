@@ -58,6 +58,7 @@ export default [
       'package-lock.json',
       'postcss.config.cjs',
       'yarn.lock',
+      'src/routes',
       'src/lib/shadcn'
     ]
   },
