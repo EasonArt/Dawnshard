@@ -76,6 +76,9 @@ internal sealed partial class SavefileEditService(
                 EntityTypes.DragonGift => ValidateDragonGiftPresent(present),
                 EntityTypes.FreeDiamantium => ValidateId0Present(present),
                 EntityTypes.Wyrmite => ValidateId0Present(present),
+                EntityTypes.Mana => ValidateId0Present(present),
+                EntityTypes.Dew => ValidateId0Present(present),
+                EntityTypes.Rupies => ValidateId0Present(present),
                 EntityTypes.HustleHammer => ValidateId0Present(present),
                 _ => false,
             };

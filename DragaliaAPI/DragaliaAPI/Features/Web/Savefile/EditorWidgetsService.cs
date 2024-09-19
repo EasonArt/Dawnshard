@@ -18,6 +18,9 @@ internal sealed class EditorWidgetsService
             new() { Type = EntityTypes.DragonGift, HasQuantity = true },
             new() { Type = EntityTypes.FreeDiamantium, HasQuantity = true },
             new() { Type = EntityTypes.Wyrmite, HasQuantity = true },
+            new() { Type = EntityTypes.Mana, HasQuantity = true },
+            new() { Type = EntityTypes.Dew, HasQuantity = true },
+            new() { Type = EntityTypes.Rupies, HasQuantity = true },
             new() { Type = EntityTypes.HustleHammer, HasQuantity = true },
         ];
 
@@ -30,6 +33,9 @@ internal sealed class EditorWidgetsService
                 [EntityTypes.Material] = GetMaterialList(),
                 [EntityTypes.DmodePoint] = GetDmodePointList(),
                 [EntityTypes.SkipTicket] = GetId0List(),
+                [EntityTypes.Rupies] = GetId0List(),
+                [EntityTypes.Dew] = GetId0List(),
+                [EntityTypes.Mana] = GetId0List(),
                 [EntityTypes.DragonGift] = GetDragonGiftList(),
                 [EntityTypes.FreeDiamantium] = GetId0List(),
                 [EntityTypes.Wyrmite] = GetId0List(),

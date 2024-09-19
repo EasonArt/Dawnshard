@@ -10,6 +10,9 @@ export const EntityType = z.enum([
   'DragonGift',
   'FreeDiamantium',
   'Wyrmite',
+  'Rupies',
+  'Mana',
+  'Dew',
   'HustleHammer'
 ]);
 
