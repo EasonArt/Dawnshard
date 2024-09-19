@@ -6,7 +6,7 @@ It uses SvelteKit 4 and is deployed as a server-side-rendered web app with [`ada
 
 The project uses `pnpm` to manage packages locally, and has code style enforced by `prettier` and `eslint`.
 
-## Development
+## Development1
 
 To set up this project locally, first install dependencies:
 
