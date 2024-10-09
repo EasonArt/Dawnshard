@@ -73,11 +73,20 @@
       特别感谢以下朋友，提供了帮助和支持
     </p>
     <ul class="ml-3 mt-1">
+      <Acknowledgement name="Jay Malhotra" avatarSrc={FatesTimelines1337}>
+              非常感谢对本平台的大力支持！
+      </Acknowledgement>
       <Acknowledgement name="a321344416" avatarSrc={Nightmerp}>
         感谢您的打赏，这是一种鼓舞，这是一种支持，这是一种动力，这是一种榜样！
       </Acknowledgement>
+      <Acknowledgement name="LukeFZ" avatarSrc={LukeFZ}>
+         感谢您在用户管理的代码支持~
+      </Acknowledgement>
       <Acknowledgement name="tb356341176" avatarSrc={Sockperson}>
-        真诚的买家，并提出了很多宝贵的建议。
+              真诚的买家，并提出了很多宝贵的建议。
+      </Acknowledgement>
+      <Acknowledgement name="Ceris" avatarSrc={Ceris}>
+         感谢您的CDN服务器的提供支持~
       </Acknowledgement>
     </ul>
   </div>
