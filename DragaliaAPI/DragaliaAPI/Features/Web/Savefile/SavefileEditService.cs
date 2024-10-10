@@ -59,7 +59,7 @@ internal sealed partial class SavefileEditService(
 
         foreach (PresentFormSubmission present in presents)
         {
-            if (present.Quantity < 1)
+            if (present.Quantity is < 1 or > 999_999)
             {
                 Log.InvalidSinglePresent(logger, present);
                 return false;
